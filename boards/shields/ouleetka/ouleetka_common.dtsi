@@ -9,11 +9,11 @@
 / {
     chosen {
         zephyr,display = &oled;
-        zmk,kscan = &kscan;
-        zmk,matrix-transform = &ktransform;
+        zmk,kscan = &kscan0;
+        zmk,matrix-transform = &default_transform;
     };
 
-    kscan: kscan {
+    kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
         diode-direction = "col2row";
