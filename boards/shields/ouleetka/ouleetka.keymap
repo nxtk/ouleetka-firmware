@@ -4,6 +4,16 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        condition_fn_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+
     behaviors {
         mm_colon_semicolon: mm_colon_semicolon {
             compatible = "zmk,behavior-mod-morph";
@@ -87,15 +97,6 @@
             >;
 
             label = "FN";
-        };
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        condition_fn_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
         };
     };
 };
