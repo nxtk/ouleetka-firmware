@@ -1,0 +1,14 @@
+file_format: "1"
+id: ouleetka
+name: ouleetka
+type: shield
+url: https://github.com/nxtk/ouleetka
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - underglow
+siblings:
+  - ouleetka_left
+  - ouleetka_right
